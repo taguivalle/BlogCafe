@@ -1,0 +1,13 @@
+/* Root se le conoce como pseudo elementos; es decir los elementos que no existen en el código HTML. Al siguiente bloque 
+:root se le conoce como la variables de CSS. */
+:root {
+    /* Root es una forma de almacenar variables de CSS que se les conoce como custom properties. */
+    --blanco: #ffffff;
+    /* Se crea una paleta de colores y se finaliza con dos puntos y posteriormente el color. */
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --fuente-principal: 3.8rem;
+    --grisclaro: #dfe9f3;
+}
