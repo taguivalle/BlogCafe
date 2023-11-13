@@ -5,19 +5,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Café</title>
-    <!-- Con este link se inserta el icono en el título de la pagina "Front End responsive" 
+    <!-- Con este link se inserta el icono en el título de la pagina "Blog de Café. " 
     https://imagen.online-convert.com/es/convertir/png-a-ico. -->
-    <link rel="shortcut icon" href="../BlogCafe/icons/granos-de-cafe.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/granos-de-cafe.ico" type="image/x-icon">
     <link rel="preload" href="css/normalize.css" as="style" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/style.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<!-- Vamos a crear el header. -->
+<header class="header">
+    <!-- Aquí vamos crear la barra de navegación dentro de un div. -->
+    <div class="contenedor">
+        <!-- Y aquí vamos a crear un enlace que nos redirija al index pero dentro de un div. -->
+        <div class="barra">
+            <!-- Esta línea es el enlace para el index. -->
+            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
+                <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+            </a>
+            <!-- Seguidamente en este tercer bloque vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace" target="_blank"
+                    rel="noopener noreferrer">Nosotros</a>
+                <a href="cursos.html" class="navegacion__enlace" target="_blank" rel="noopener noreferrer">Cursos</a>
+                <a href="contacto.html" class="navegacion__enlace" target="_blank"
+                    rel="noopener noreferrer">Contactos</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Vamos a crear el título que va a ser el hijo del header dentro de una etiqueta div. Además utilizamos BEM. -->
+    <div class="header__text">
+        <h2 class="no-margin">Blog de Café con Consejos y Cursos</h2>
+        <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+    </div>
+</header>
+<div class="contenedor contenido-principal">
+    <!-- Aquí vamos a crear un main con una clase blog y este se convierte en el bloque para todo el blog. -->
+    <main class="blog">
+        <h3>Nuestro Blog</h3>
+        <!-- Aquí se encuentra las noticias de nuestro primer bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <!-- Y aquí colocamos nuestra primera imagen del blog. -->
+                <img src="img/blog1.jpg" alt="imagen blog">
+            </div>
+            <div class="entrada__contenido">
+                <h3>Tipos de Granos de Café</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
+                    incidunt natus quis possimus.</p>
+                <!-- Este una especie de bloque modificador. -->
+                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                    Entrada</a>
+            </div>
+        </article><!-- Aquí finaliza la entrada del primer bloque. -->
+        <!-- Aquí se encuentra las noticias de nuestro segundo bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <!-- Y aquí colocamos nuestra imagen del segundo blog. -->
+                <img src="img/blog2.jpg" alt="imagen blog">
+            </div>
+            <div class="entrada__contenido">
+                <h3>Tres deliciosas recetas de Café</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
+                    incidunt natus quis possimus.</p>
+                <!-- Este una especie de bloque modificador. -->
+                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                    Entrada</a>
+            </div>
+        </article><!-- Aquí finaliza la segunda entrada del bloque. -->
+        <!-- Aquí se encuentra las noticias de nuestro tercer bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+        <article class="entrada">
+            <div class="entrada__imagen">
+                <!-- Y aquí colocamos nuestra imagen del tercer blog. -->
+                <img src="img/blog3.jpg" alt="imagen blog">
+            </div>
+            <div class="entrada__contenido">
+                <h3>Beneficios del Café</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
+                    incidunt natus quis possimus.</p>
+                <!-- Este una especie de bloque modificador. -->
+                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                    Entrada</a>
+            </div>
+        </article><!-- Aquí finaliza la tercer entrada del bloque. -->
+    </main>
+    <!-- Y aquí vamos a tener un aside. -->
+    <aside class="sidebar">
+        <h3>Nuestros Cursos y Talleres</h3>
+        <!-- Aquí inicia la lista no ordenada (ul);es decir las listas agregan viñetas; a estas se les conoce como order 
+        list o lista no ordenada. -->
+        <ul class="cursos no-padding">
+            <li class="widget-curso">
+                <h4 class="no-margin">Técnicas de Extracción de Café</h4>
+                <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
+                    Información</a>
+            </li>
+            <li class="widget-curso">
+                <h4 class="no-margin">Cuatro recetas de Café para principiantes</h4>
+                <p class="widget-curso__label">Precio <span class="widget-curso__info">Gratis</span></p>
+                <p class="widget-curso__label">Cupo <span class="widget-curso__info">20</span></p>
+                <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
+                    Información</a>
+            </li>
+        </ul>
+    </aside>
+</div>
+<footer class="footer">
+    <div class="contenedor">
+        <!-- Gracias a los beneficios de BEM a que tiene esa separación de bloques y que cada bloque tiene esa separación
+        de estilos; entonces, podemos utilizar otros estilos en la navegación; por lo tanto copiamos y pegamos nuestra 
+        barra de navegación aquí en el footer. -->
+        <div class="barra">
+            <!-- Esta línea es el enlace para el index. -->
+            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
+                <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+            </a>
+            <!-- Seguidamente en este bloque del footer vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
+            <nav class="navegacion">
+                <a ref="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a ref="cursos.html" class="navegacion__enlace">Cursos</a>
+                <a ref="contacto.html" class="navegacion__enlace">Contactos</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 <body>
 
