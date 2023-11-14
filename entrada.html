@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas</title>
+    <!-- Con este link se inserta el icono en el título de la pagina "Blog de Café. " 
+    https://imagen.online-convert.com/es/convertir/png-a-ico. -->
+    <link rel="shortcut icon" href="icons/entradas.ico" type="image/x-icon">
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!-- Vamos a crear el header. -->
+<header class="header">
+    <!-- Aquí vamos crear la barra de navegación dentro de un div. -->
+    <div class="contenedor">
+        <!-- Y aquí vamos a crear un enlace que nos redirija al index pero dentro de un div. -->
+        <div class="barra">
+            <!-- Esta línea es el enlace para el index. -->
+            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
+                <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+            </a>
+            <!-- Seguidamente en este tercer bloque vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
+            <nav class="navegacion">
+                <a href="nosotros.html" class="navegacion__enlace" target="_blank"
+                    rel="noopener noreferrer">Nosotros</a>
+                <a href="cursos.html" class="navegacion__enlace" target="_blank" rel="noopener noreferrer">Cursos</a>
+                <a href="contacto.html" class="navegacion__enlace" target="_blank"
+                    rel="noopener noreferrer">Contactos</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Vamos a crear el título que va a ser el hijo del header dentro de una etiqueta div. Además utilizamos BEM. -->
+    <div class="header__text">
+        <h2 class="no-margin">Blog de Café con Consejos y Cursos</h2>
+        <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+    </div>
+</header>
+<!-- Aquí vamos a crear un main con una clase blog y este se convierte en el bloque para nosotros. -->
+<main class="contenedor">
+    <h3 class="centrar-texto">Sobre Nosotros</h3>
+    <img src="img/blog1.jpg" alt="Imagen de nuestro blog">
+    <p>Lorem ipsum dolor sit amet. Sed quod velit sed nesciunt quibusdam id eligendi enim quo voluptatibus commodi
+        aut dolorum maiores qui galisum dolorum quo alias quidem. Aut temporibus voluptatibus a vero similique id
+        nostrum itaque quo odio consequatur et tenetur quos aut rerum molestiae? Nam exercitationem optio et
+        corrupti consequatur sed nesciunt quia nam impedit consequatur sit tempora unde sed quia cupiditate quo
+        labore impedit. Ut ipsa exercitationem aut cumque possimus in quia vitae ut corporis neque. Ut incidunt
+        perspiciatis est corporis pariatur ea illum nisi aut enim dignissimos ab numquam molestiae eum repudiandae
+        reiciendis ad illum excepturi. Ad cumque nesciunt ut dolorum cumque aut voluptatibus quasi sit obcaecati
+        voluptatum est voluptas omnis aut dolores maiores. Ea nobis architecto est dolor explicabo cum sunt quam est
+        omnis internos sit veniam architecto. Sed omnis odio sit voluptas explicabo eos dolore modi est inventore
+        ratione rem magnam consectetur!</p>
+    <p>Ut harum consequatur aut sunt impedit eum sint impedit quo dignissimos recusandae? Id sequi pariatur ea
+        architecto eaque vel ipsum veniam aut tenetur ducimus. At dolores molestiae aut repellendus inventore qui
+        eaque esse non quia totam? Aut voluptate tenetur ab aperiam sunt est deleniti saepe sit galisum quia ut
+        officia quisquam qui sint fuga non eius facere. Est tempora veniam in dolorem assumenda id distinctio quia
+        sed quaerat excepturi hic ducimus distinctio vel delectus doloremque ab modi inventore. Sed dolore dolore ex
+        consequatur magnam aut possimus dolor et repellat ullam ut voluptatum iure 33 voluptates consequuntur ut
+        natus consequatur. Quo velit consequatur aut unde nostrum sit vitae quasi eos beatae voluptatum. Et repellat
+        dolorem aut voluptatem corporis aut eligendi asperiores eum eius omnis in repellat praesentium nam numquam
+        galisum.</p>
+    <p>Est autem eveniet id expedita esse non dolor veritatis. Qui odio dicta ad alias consequuntur qui delectus
+        incidunt nam tempora voluptatibus! Et dolorem aperiam et provident voluptas rem iste minus? Sed velit amet
+        et amet incidunt est debitis eius. Eum Quis voluptatem aut animi similique 33 delectus fuga ea nisi quia.
+        Sit eveniet voluptas ab quaerat illum ut vitae minima! Ad temporibus voluptatibus eos exercitationem dicta
+        et perspiciatis vero rem quidem quia aut obcaecati placeat. Ut minima perferendis et tempora saepe non
+        voluptates autem eum ipsam mollitia sed dolores consequatur sed quibusdam enim rem magnam nulla. Hic quaerat
+        distinctio eos architecto esse qui molestiae dicta qui repudiandae excepturi. A perspiciatis autem et
+        numquam ipsum ea mollitia quam et iste placeat non voluptates dolor hic ipsa dolores. Ut architecto
+        reprehenderit et quia assumenda et totam fuga ea architecto tempore et voluptatem amet vel blanditiis totam
+        eum distinctio suscipit. Ut illum libero non quaerat fugit ex tempore optio. Id quis ullam et voluptatem
+        quaerat eos saepe fugiat. Et voluptatem esse et rerum provident ut quos blanditiis ut voluptate blanditiis!
+    </p>
+</main>
+<footer class="footer">
+    <div class="contenedor">
+        <!-- Gracias a los beneficios de BEM a que tiene esa separación de bloques y que cada bloque tiene esa separación
+        de estilos; entonces, podemos utilizar otros estilos en la navegación; por lo tanto copiamos y pegamos nuestra 
+        barra de navegación aquí en el footer. -->
+        <div class="barra">
+            <!-- Esta línea es el enlace para el index. -->
+            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
+                <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+            </a>
+            <!-- Seguidamente en este bloque del footer vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
+            <nav class="navegacion">
+                <a ref="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a ref="cursos.html" class="navegacion__enlace">Cursos</a>
+                <a ref="contacto.html" class="navegacion__enlace">Contactos</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<body>
+
+</body>
+
+</html>

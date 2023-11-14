@@ -3,19 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Esta etiqueta nos permite que se vea en un dispositivo diferente al de un pc. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Otra etiqueta muy importante a tener en cuenta: -->
+    <meta name="description" content="Página web de blog de café">
     <title>Blog Café</title>
     <!-- Con este link se inserta el icono en el título de la pagina "Blog de Café. " 
     https://imagen.online-convert.com/es/convertir/png-a-ico. -->
     <link rel="shortcut icon" href="icons/granos-de-cafe.ico" type="image/x-icon">
-    <link rel="preload" href="css/normalize.css" as="style" />
+    <!-- Los preloads nos permite recargar más rápidamente. Para este caso de normalize. -->
+    <link rel="preload" href="css/normalize.css" as="css" />
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Este es el preload del google font. -->
+    <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/style.css">
+    <!-- Este es el preload del google font. -->
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin="crossorigin" as="font">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Este es el preload del google font. -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+        crossorigin="crossorigin" as="font">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <!-- Los preloads nos permite recargar más rápidamente. Para este caso de los estilos. -->
+    <link rel="preload" href="css/style.css" crossorigin="crossorigin" as="css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- El prefetch nos permite llevar la siguiente página que esperaríamos (Una especie de intuición) que el usuario 
+    visite más rápidamente y/o para darle una mejor experiencia. (Google analytics) -->
+    <link rel="prefetch" href="nosotros.html" as="document">
 </head>
 <!-- Vamos a crear el header. -->
 <header class="header">
@@ -43,107 +58,129 @@
         <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
     </div>
 </header>
-<div class="contenedor contenido-principal">
-    <!-- Aquí vamos a crear un main con una clase blog y este se convierte en el bloque para todo el blog. -->
-    <main class="blog">
-        <h3>Nuestro Blog</h3>
-        <!-- Aquí se encuentra las noticias de nuestro primer bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-        <article class="entrada">
-            <div class="entrada__imagen">
-                <!-- Y aquí colocamos nuestra primera imagen del blog. -->
-                <img src="img/blog1.jpg" alt="imagen blog">
-            </div>
-            <div class="entrada__contenido">
-                <h3>Tipos de Granos de Café</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
-                    incidunt natus quis possimus.</p>
-                <!-- Este una especie de bloque modificador. -->
-                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                    Entrada</a>
-            </div>
-        </article><!-- Aquí finaliza la entrada del primer bloque. -->
-        <!-- Aquí se encuentra las noticias de nuestro segundo bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-        <article class="entrada">
-            <div class="entrada__imagen">
-                <!-- Y aquí colocamos nuestra imagen del segundo blog. -->
-                <img src="img/blog2.jpg" alt="imagen blog">
-            </div>
-            <div class="entrada__contenido">
-                <h3>Tres deliciosas recetas de Café</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
-                    incidunt natus quis possimus.</p>
-                <!-- Este una especie de bloque modificador. -->
-                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                    Entrada</a>
-            </div>
-        </article><!-- Aquí finaliza la segunda entrada del bloque. -->
-        <!-- Aquí se encuentra las noticias de nuestro tercer bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-        <article class="entrada">
-            <div class="entrada__imagen">
-                <!-- Y aquí colocamos nuestra imagen del tercer blog. -->
-                <img src="img/blog3.jpg" alt="imagen blog">
-            </div>
-            <div class="entrada__contenido">
-                <h3>Beneficios del Café</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                    fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum ratione
-                    incidunt natus quis possimus.</p>
-                <!-- Este una especie de bloque modificador. -->
-                <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                    Entrada</a>
-            </div>
-        </article><!-- Aquí finaliza la tercer entrada del bloque. -->
-    </main>
-    <!-- Y aquí vamos a tener un aside. -->
-    <aside class="sidebar">
-        <h3>Nuestros Cursos y Talleres</h3>
-        <!-- Aquí inicia la lista no ordenada (ul);es decir las listas agregan viñetas; a estas se les conoce como order 
-        list o lista no ordenada. -->
-        <ul class="cursos no-padding">
-            <li class="widget-curso">
-                <h4 class="no-margin">Técnicas de Extracción de Café</h4>
-                <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
-                <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
-                    Información</a>
-            </li>
-            <li class="widget-curso">
-                <h4 class="no-margin">Cuatro recetas de Café para principiantes</h4>
-                <p class="widget-curso__label">Precio <span class="widget-curso__info">Gratis</span></p>
-                <p class="widget-curso__label">Cupo <span class="widget-curso__info">20</span></p>
-                <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
-                    Información</a>
-            </li>
-        </ul>
-    </aside>
-</div>
-<footer class="footer">
-    <div class="contenedor">
-        <!-- Gracias a los beneficios de BEM a que tiene esa separación de bloques y que cada bloque tiene esa separación
-        de estilos; entonces, podemos utilizar otros estilos en la navegación; por lo tanto copiamos y pegamos nuestra 
-        barra de navegación aquí en el footer. -->
-        <div class="barra">
-            <!-- Esta línea es el enlace para el index. -->
-            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
-                <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-            </a>
-            <!-- Seguidamente en este bloque del footer vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
-            <nav class="navegacion">
-                <a ref="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                <a ref="cursos.html" class="navegacion__enlace">Cursos</a>
-                <a ref="contacto.html" class="navegacion__enlace">Contactos</a>
-            </nav>
-        </div>
-    </div>
-</footer>
 
 <body>
+    <div class="contenedor contenido-principal">
+        <!-- Aquí vamos a crear un main con una clase blog y este se convierte en el bloque para todo el blog. -->
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+            <!-- Aquí se encuentra las noticias de nuestro primer bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
+                la imagen.webp entonces cargue el formato imagen.jpg. -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <!-- Aquí colocamos nuestra imagen del primer blog. El loading= lazy nos sirve para que una vez que 
+                    lleguemos a ese elemento queremos que lo descargue. -->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
 
+                </div>
+                <div class="entrada__contenido">
+                    <h3>Tipos de Granos de Café</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
+                        ratione
+                        incidunt natus quis possimus.</p>
+                    <!-- Este una especie de bloque modificador. -->
+                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                        Entrada</a>
+                </div>
+            </article><!-- Aquí finaliza la entrada del primer bloque. -->
+            <!-- Aquí se encuentra las noticias de nuestro segundo bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
+                la imagen.webp entonces cargue el formato imagen.jpg. -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <!-- Aquí colocamos nuestra imagen del segundo blog. El loading= lazy nos sirve para que una vez que 
+                    lleguemos a ese elemento queremos que lo descargue. -->
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h3>Tres deliciosas recetas de Café</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
+                        ratione
+                        incidunt natus quis possimus.</p>
+                    <!-- Este una especie de bloque modificador. -->
+                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                        Entrada</a>
+                </div>
+            </article><!-- Aquí finaliza la segunda entrada del bloque. -->
+            <!-- Aquí se encuentra las noticias de nuestro tercer bloque por llamarlo así y se hace con una etiqueta 
+        article porque es una entrada de blog. -->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
+                la imagen.webp entonces cargue el formato imagen.jpg. -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <!-- Aquí colocamos nuestra imagen del tercer blog. El loading= lazy nos sirve para que una vez que 
+                    lleguemos a ese elemento queremos que lo descargue. -->
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h3>Beneficios del Café</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
+                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
+                        ratione
+                        incidunt natus quis possimus.</p>
+                    <!-- Este una especie de bloque modificador. -->
+                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
+                        Entrada</a>
+                </div>
+            </article><!-- Aquí finaliza la tercer entrada del bloque. -->
+        </main>
+        <!-- Y aquí vamos a tener un aside. -->
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+            <!-- Aquí inicia la lista no ordenada (ul);es decir las listas agregan viñetas; a estas se les conoce como order 
+        list o lista no ordenada. -->
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Técnicas de Extracción de Café</h4>
+                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
+                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
+                    <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
+                        Información Sobre Nuestros Cursos</a>
+                </li>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Cuatro recetas de Café para principiantes</h4>
+                    <p class="widget-curso__label">Precio <span class="widget-curso__info">Gratis</span></p>
+                    <p class="widget-curso__label">Cupo <span class="widget-curso__info">20</span></p>
+                    <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
+                        Información</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="contenedor">
+            <!-- Gracias a los beneficios de BEM a que tiene esa separación de bloques y que cada bloque tiene esa separación
+        de estilos; entonces, podemos utilizar otros estilos en la navegación; por lo tanto copiamos y pegamos nuestra 
+        barra de navegación aquí en el footer. -->
+            <div class="barra">
+                <!-- Esta línea es el enlace para el index. -->
+                <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <!-- Seguidamente en este bloque del footer vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
+                <nav class="navegacion">
+                    <a ref="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a ref="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a ref="contacto.html" class="navegacion__enlace">Contactos</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 
 </html>
