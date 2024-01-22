@@ -47,6 +47,7 @@ Para solucionar este pequeño impace, al dar click en inspeccionar (esto se hace
 
 `
 const heading = document.querySelector('.header__texto h2'); // cero (0) o un (1) elemento
+console.log(heading);
 `
 
 De esta forma, estamos seleccionando el h2 que se encuentra dentro de ese header__texto; sí llegase otro h2 dentro de este main; pero, no tiene esa clase de texto el otro no lo va seleccionar; entonces, es una buena práctica porque va a seleccionar solamente los elementos que se encuentren dentro del paréntesis de la variable heading; para este caso; sí guardamos cambios podemos ver en consola los elementos que hemos relacionado.
