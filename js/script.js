@@ -14,5 +14,23 @@ enlaces[0].classList.add('nueva-clase');
 // enlaces = document.querySelectorAll('.navegacion a')[0].textContent = 'Nuevo texto para enlace';
 
 // getElementById.
-const heading2 = document.getElementById('heading');
-console.log(heading2);
+// const heading2 = document.getElementById('heading');
+// console.log(heading2);
+
+// createElement
+const nuevoEnlace = document.createElement('A');
+
+// como generar un nuevo enlace.
+// Agregar el href.
+nuevoEnlace.href = 'Nuevo-enlace.html';
+
+// Agregar el texto.
+nuevoEnlace.textContent = 'Carrito';
+
+// Agregar la clase.
+nuevoEnlace.classList.add('navegacion__enlace');
+
+// Agregarlo al documento
+const navegacion = document.querySelector('.navegacion');
+navegacion.appendChild(nuevoEnlace);
+console.log(nuevoEnlace);
