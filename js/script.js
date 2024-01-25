@@ -38,17 +38,25 @@ console.log(nuevoEnlace);
 // Events
 
 console.log(1);
-window.addEventListener('load', imprimir);
+window.addEventListener('load', imprimir);// El load espera a que el JS y los archivos que dependen del HTMl estén listos.
 window.onload = function (params) {
     console.log(3);
 }
-document.addEventListener('DOMContentLoaded', function (params) {
+document.addEventListener('DOMContentLoaded', function () {// El DOMContentLoaded solamente espera al HTML
     console.log(4);
 })
 console.log(5);
 function imprimir() {
     console.log(2);
 }
-window.onscroll = function (params) {
-    console.log('Scrolling...');
+window.onscroll = function (evento) {
+    console.log(evento);
 }
+
+// Seleccionar elementos y asociarles un evento.
+const btnEnviar = document.querySelector('.boton--primario');
+btnEnviar.addEventListener('click', function (evento) {
+    console.log(evento);
+    evento.preventDefault();
+    console.log('Enviando formulario');
+})
