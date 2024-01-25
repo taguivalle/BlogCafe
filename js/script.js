@@ -34,3 +34,21 @@ nuevoEnlace.classList.add('navegacion__enlace');
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 console.log(nuevoEnlace);
+
+// Events
+
+console.log(1);
+window.addEventListener('load', imprimir);
+window.onload = function (params) {
+    console.log(3);
+}
+document.addEventListener('DOMContentLoaded', function (params) {
+    console.log(4);
+})
+console.log(5);
+function imprimir() {
+    console.log(2);
+}
+window.onscroll = function (params) {
+    console.log('Scrolling...');
+}
