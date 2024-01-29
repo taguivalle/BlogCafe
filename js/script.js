@@ -37,21 +37,21 @@ console.log(nuevoEnlace);
 
 // Events
 
-console.log(1);
-window.addEventListener('load', imprimir);// El load espera a que el JS y los archivos que dependen del HTMl estén listos.
-window.onload = function (params) {
-    console.log(3);
-}
-document.addEventListener('DOMContentLoaded', function () {// El DOMContentLoaded solamente espera al HTML
-    console.log(4);
-})
-console.log(5);
-function imprimir() {
-    console.log(2);
-}
-window.onscroll = function (evento) {
-    console.log(evento);
-}
+// console.log(1);
+// window.addEventListener('load', imprimir);// El load espera a que el JS y los archivos que dependen del HTMl estén listos.
+// window.onload = function (params) {
+//     console.log(3);
+// }
+// document.addEventListener('DOMContentLoaded', function () {// El DOMContentLoaded solamente espera al HTML
+//     console.log(4);
+// })
+// console.log(5);
+// function imprimir() {
+//     console.log(2);
+// }
+// window.onscroll = function (evento) {
+//     console.log(evento);
+// }
 
 // Seleccionar elementos y asociarles un evento.
 const btnEnviar = document.querySelector('.boton--primario');
@@ -60,3 +60,22 @@ btnEnviar.addEventListener('click', function (evento) {
     evento.preventDefault();
     console.log('Enviando formulario');
 })
+
+// Eventos de los inputs y los TexTarea
+const datos = {
+    nombreInput: '',
+    email: '',
+    mensaje: ''
+}
+const nombreInput = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+nombreInput.addEventListener('input', leerTexto);
+email.addEventListener('input', leerTexto);
+mensaje.addEventListener('input', leerTexto);
+function leerTexto(e) {
+    // console.log(e.target.value);
+    datos[e.target.id] = e.target.value;
+    console.log(datos);
+}
