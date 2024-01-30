@@ -54,12 +54,12 @@ console.log(nuevoEnlace);
 // }
 
 // Seleccionar elementos y asociarles un evento.
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click', function (evento) {
-    console.log(evento);
-    evento.preventDefault();
-    console.log('Enviando formulario');
-})
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click', function (evento) {
+//     console.log(evento);
+//     evento.preventDefault();
+//     console.log('enviando formulario');
+// })
 
 // Eventos de los inputs y los TexTarea
 const datos = {
@@ -70,12 +70,22 @@ const datos = {
 const nombreInput = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombreInput.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+
+// Un evento de submit
+formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+    console.log('Enviando Formulario')
+})
 function leerTexto(e) {
     // console.log(e.target.value);
     datos[e.target.id] = e.target.value;
     console.log(datos);
 }
+
+
+
