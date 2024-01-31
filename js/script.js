@@ -67,11 +67,13 @@ const datos = {
     email: '',
     mensaje: ''
 }
+// Aquí encontramos todas las variables
 const nombreInput = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
 const formulario = document.querySelector('.formulario');
 
+// Aquí encontramos todos los addEventListener
 nombreInput.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
@@ -82,7 +84,7 @@ formulario.addEventListener('submit', function (evento) {
 
     // Aquí validamos el formulario
     const { nombreInput, email, mensaje } = datos;
-    if (nombreInput === '' || email === '' || mensaje === '') {
+    if (!nombreInput === '' || email === '' || mensaje === '') {
         mostrarError('Todos los campos son obligatorios');
         return; // el return evita la ejecución del código.
     }
@@ -105,6 +107,7 @@ function mostrarMensaje(mensaje) {
     alerta.textContent = mensaje;
     alerta.classList.add('correcto');
     formulario.appendChild(alerta);
+    formulario.addEventListener('click', () => alerta.remove());
 
     // con esta función desaparece después de cinco segundos (5'')
     setTimeout(() => {
@@ -120,6 +123,7 @@ function mostrarError(mensaje) {
     error.textContent = mensaje;
     error.classList.add('error');
     formulario.appendChild(error);
+    formulario.addEventListener('click', () => error.remove());
 
     // con esta función desaparece después de cinco segundos (5'')
     setTimeout(() => {

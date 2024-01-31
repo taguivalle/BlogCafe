@@ -62,6 +62,44 @@ Por lo tanto podemos hacer que este evento dure por ejemplo cinco segundos  (5''
 
 Podemos comprobar que después de cinco segundos (5'') el mensaje desaparece el HTML; ahora, si colocamos algunos datos vemos que el comportamiento de los eventos es el que hemos planteado desde un principio. Pero también es muy importante que si se agregaron los campos satisfactoriamente, también nos debe de decir un mensaje de enviado éxitosamente los datos; por ejemplo. Es normal que el campo de email, debemos de tener un servicio de backend o uno de email.
 
-Entonces, si observamos el return nos da a entender que, este va a evitar la ejecución del código hasta el final del if; pero podemos crear otra alerta que nos diga que el proceso es éxitoso. Por lo tanto, vamos a crear una alerta sin necesidad de un else; pués el return nos ayuda a evitar la ejecución del código. Solamente copiemos la estructura de la función mostrarError y cambiemos el nombre por mostrarMensaje y en lugar de error escribamos alerta.
+Entonces, si observamos el return nos da a entender que, este va a evitar la ejecución del código hasta el final del if; pero podemos crear otra alerta que nos diga que el proceso es éxitoso. Por lo tanto, vamos a crear una alerta sin necesidad de un else; pués el return nos ayuda a evitar la ejecución del código. Solamente copiemos la estructura de la función mostrarError y cambiemos el nombre por mostrarMensaje y en lugar de error escribamos alerta; para mi caso.
 
-en la siguiente lección one hundred fifty two (152) llamada creando un validador de formularios parte dos continuamos con el tema. vamos a ello.
+Con base en lo anterior, vamos a crear la función pero con mostrarMensaje; o sea que nuestro código queda así:
+
+`
+function mostrarMensaje(mensaje) {
+    const alerta = document.createElement('P');
+    // Estamos creando HTML
+    alerta.textContent = mensaje;
+    alerta.classList.add('correcto');
+    formulario.appendChild(alerta);
+    formulario.addEventListener('click', () => alerta.remove());
+     // con esta función desaparece después de cinco segundos (5'')
+    setTimeout(() => {
+        alerta.remove();
+    }, 5000);
+}
+`
+Excelente, gracias a Dios; ahora solamente nos falta es modificar el CSS y lo haremos de la siguiente manera:
+
+`.error {
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+`
+Nuevamente, al guardar cambios vemos que nos sale el mensaje correctamente; pero, como lo normal es que debe de aparecer si ya enviamos el mensaje nos debe de salir el mensaje correspondiente de enviado con éxito, o el que sea de preferencia. De igual manera, vamos crearle los estilos a la clase correcto y este código queda así:
+
+`
+.correcto {
+    background-color: greenyellow;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+`
+
+como se ha visto esta pequeña teoría mostrada hasta aquí la podemos utilizar por ejemplo, en la parte de producción; es decir en la creación de un sitio web real. En la siguiente lección one hundred fifty two (152) llamada creando un validador de formularios parte dos (2) continuaremos con el tema. vamos a ello.
