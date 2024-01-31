@@ -384,6 +384,22 @@ usuario. para este caso, vamos a utilizar nuestra mq.
 }
 
 /* Aquí vamos a crear los estilos de los contactos. */
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+.correcto {
+    background-color: greenyellow;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
 .contactos-bg {
     background-image: url(../img/contacto.jpg);
     height: 40rem;

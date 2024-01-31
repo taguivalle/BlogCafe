@@ -61,7 +61,7 @@ console.log(nuevoEnlace);
 //     console.log('enviando formulario');
 // })
 
-// Eventos de los inputs y los TexTarea
+// Eventos de los inputs y los TexTarea, la variable datos es global
 const datos = {
     nombreInput: '',
     email: '',
@@ -76,15 +76,55 @@ nombreInput.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
 
-// Un evento de submit
+// Este es el evento de submit
 formulario.addEventListener('submit', function (evento) {
     evento.preventDefault();
-    console.log('Enviando Formulario')
-})
+
+    // Aquí validamos el formulario
+    const { nombreInput, email, mensaje } = datos;
+    if (nombreInput === '' || email === '' || mensaje === '') {
+        mostrarError('Todos los campos son obligatorios');
+        return; // el return evita la ejecución del código.
+    }
+    // Crear la alerta de enviar correctamente el mensaje.
+    mostrarMensaje('Mensaje enviado correctamente');
+
+});
+
 function leerTexto(e) {
     // console.log(e.target.value);
     datos[e.target.id] = e.target.value;
-    console.log(datos);
+    // console.log(datos);
+}
+
+// Con esta función nos muestra una alerta de que se envío correctamente en la pantalla
+function mostrarMensaje(mensaje) {
+    const alerta = document.createElement('P');
+
+    // Estamos creando HTML
+    alerta.textContent = mensaje;
+    alerta.classList.add('correcto');
+    formulario.appendChild(alerta);
+
+    // con esta función desaparece después de cinco segundos (5'')
+    setTimeout(() => {
+        alerta.remove();
+    }, 5000);
+}
+
+// Con esta función nos muestra un error en la pantalla
+function mostrarError(mensaje) {
+    const error = document.createElement('P');
+
+    // Estamos creando HTML
+    error.textContent = mensaje;
+    error.classList.add('error');
+    formulario.appendChild(error);
+
+    // con esta función desaparece después de cinco segundos (5'')
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
 }
 
 
