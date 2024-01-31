@@ -85,11 +85,13 @@ formulario.addEventListener('submit', function (evento) {
     // Aquí validamos el formulario
     const { nombreInput, email, mensaje } = datos;
     if (!nombreInput === '' || email === '' || mensaje === '') {
-        mostrarError('Todos los campos son obligatorios');
+        // Esta es nuestra segunda alerta
+        mostrarAlerta('Todos los campos son obligatorios', true);
         return; // el return evita la ejecución del código.
     }
     // Crear la alerta de enviar correctamente el mensaje.
-    mostrarMensaje('Mensaje enviado correctamente');
+    // Esta es nuestra primer alerta
+    mostrarAlerta('Mensaje enviado correctamente');
 
 });
 
@@ -99,37 +101,20 @@ function leerTexto(e) {
     // console.log(datos);
 }
 
-// Con esta función nos muestra una alerta de que se envío correctamente en la pantalla
-function mostrarMensaje(mensaje) {
+// Creamos la nueva función para refactorizar mejor el código.
+// Esta es nuestra tercer alerta
+function mostrarAlerta(mensaje, error = null) {
     const alerta = document.createElement('P');
-
     // Estamos creando HTML
     alerta.textContent = mensaje;
-    alerta.classList.add('correcto');
+    if (error) {
+        alerta.classList.add('error');
+    } else {
+        alerta.classList.add('correcto');
+    }
     formulario.appendChild(alerta);
-    formulario.addEventListener('click', () => alerta.remove());
-
     // con esta función desaparece después de cinco segundos (5'')
     setTimeout(() => {
         alerta.remove();
     }, 5000);
 }
-
-// Con esta función nos muestra un error en la pantalla
-function mostrarError(mensaje) {
-    const error = document.createElement('P');
-
-    // Estamos creando HTML
-    error.textContent = mensaje;
-    error.classList.add('error');
-    formulario.appendChild(error);
-    formulario.addEventListener('click', () => error.remove());
-
-    // con esta función desaparece después de cinco segundos (5'')
-    setTimeout(() => {
-        error.remove();
-    }, 5000);
-}
-
-
-
