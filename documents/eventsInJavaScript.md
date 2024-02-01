@@ -20,8 +20,10 @@ Window es lo que se conoce como el objeto global; incluso documento pertenece a 
 
 Con base en esto, podemos utilizar algunas funciones como window y punto setTimeOut (`window.setTimeOut`); pero son funciones que existen en **JavaScript** por lo tanto, window usualmente no lo utiliza; pero, window hace  referencia digamos a todo el **Javascript** disponible. Entonces, window es un nivel más alto que el document; pués este solamente hace referencia al HTML. Load es un evento por lo tanto vamos a crear una función (function) con sus paréntesis y corchetes cuadrados {}; a esta función se le conoce como callBack; es decir que cuando el evento agregado (addEvenListener) ocurre o sucede seguidamente la función (function); ahora vamos a mover un console.log(2) dentro de la función. Nuestra línea queda así:
 
-`console.log(1);
-window.addEventListener('load', function(){console.log(2);}) console.log(5);`
+````JavaScript
+console.log(1);
+window.addEventListener('load', function(){console.log(2);}) console.log(5);
+````
 
 Es evidente que, vamos a tener un console.log(1), un console.log(2) y un console.log(5); pero el console.log(2) va a esperar a que el documento esté listo sí guardamos cambios podemos ver que aparecen los números uno (1), cinco (5) y el dos (2). Ya nuestro código no se ejecutó de arriba hacia abajo, sino que esperó a que suceda el evento de window.addEvenListener. Ahora load nos va a decir que espera a que el **JavaScript** y los archivos que dependen del HTML, estén listos.
 
@@ -29,7 +31,9 @@ Realicemos otro ejemplo; escribamos `window.onload = function(){console.log(3)}`
 
 Un tercer evento es `document.addEvenListener()` y vamos a esperar a que suceda un evento ('load') en este tercer evento vamos a escribir o a reemplazar el load por `DOMContentLoad`; Ese DOM debe de ser en mayúsculas como la letra "L"; nuevamente, en caso de que una vez se cumpla el addEvenListener se ejecute, pasamos a la funcion (function) y vamos a escribir un console punto log con un valor de cuatro (4); o sea que nuestra línea es:
 
-`document.addEventListener( 'DOMContentLoad', function(){console.log(4)})`
+```JavaScript
+document.addEventListener( 'DOMContentLoad', function(){console.log(4)})
+```
 
 Excelente, nos aparece en consola en orden descendente el número uno (1), el número cinco (5), el número cuatro (4), el número tres (3) y el número tres (3); debido a que es el orden de los eventos que necesitabamos hacer o llamar: se ven un poco extraño el orden pero así suceden. Cuál es la diferencia entre el DOMContentLoad y el load? en el caso del load espera a que se descargue todo el HTML o sea que, espera a que se descargue todo; imágenes, CSS, el JavaScript; todo lo que se tenga en nuestro archivo HTML para este caso contacto.html.
 
@@ -37,7 +41,8 @@ y en el DOMContentLoad solamente espera a que se descargue el HTML; sin importar
 
 Por lo tanto con el DOMContentLoad es más rápido o se va a empezar a ejecutar nuestro código sin mayores contratiempos; por lo que es más recomendable. De otra parte, podemos ver que estamos seleccionando un elemento (window) y seguidamente le agregamos un evento (addEventListener) y para registrar el evento un (load), también tenemos una función (function) y estas funciones pueden ser o se pueden utilizar aparte; por ejemplo, `function imprimir(){console.log(2)}` y en lugar de la function lo reemplazamos por imprimir; nuestro código quedaría de la siguiente manera:
 
-`console.log(1);
+```JavaScript
+console.log(1);
 window.addEventListener('load', imprimir);
 window.onload = function (params) {
     console.log(3);
@@ -48,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function (params) {
 console.log(5);
 function imprimir(){
     console.log(2);
-}`
+}
+```
 
 Listo, como pudimos ver de esta forma en que escribimos la función (function) por fuera ese evento addEventListener sabe que tiene que llamar a la función imprimir; Vemos que, nuestra función se ejecutó correctamente desde la función (function) imprimir. Sí lo preferimos, podemos crear funciones (function) por aparte o separadas para no depender de una función muy grande asociada al evento. Es decir, si son pocas líneas de código se puede hacer de esta manera que la hicieramos al principio; pero sí el lo contrario utilizamos funciones por separado.
 

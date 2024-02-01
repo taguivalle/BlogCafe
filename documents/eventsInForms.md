@@ -12,13 +12,14 @@ Recordemos que, en los formularios vamos a tener multiples inputs, TextArea, etc
 
 Seguidamente, o sea después del evento 'submit' vamos a tener un callBack y este va a ser una función (function) con sus respectivo paréntesis, dentro de estos vamos a llamar el evento (e, evt, evnt o evento) y llaves {} dentro de esta llaves vamos a tener un evento con el preventDeFault() para prevenir una acción, en la siguiente línea vamos a tener un console.log() con un mensaje que diga por ejemplo 'Enviando el Formulario'. Algo muy importante a tener en cuenta es que, nuestras dos variables o nuestro dos botones (btnEnviar y formulario) uno está seleccionando un botón enviar y la otra parte esta seleccionando el formulario, solamente uno de los dos va a funcionar y para este caso va a funcionar el btnEnviar. Nuestro código queda Así:
 
-`
+```JavaScript
 const formulario = document.querySelector('.formulario');
 formulario.addEventListener('submit', function(evento){
     evento.preventDeFault();
     console.log(Enviando Formulario)
 })
-`
+```
+
 Pero, porqué?. Al momento de oprimir el botón enviar; podemos observar que, se está enviando el formulario en minúsculas mientras que la variable formula la distinguimos porque viene en mayúsculas. Y porqué no ejecuta el formulario? porque estamos previniendo la accion por default (preventDeFault); por lo tanto se va a prevenir asa acción. También se va a prevenir enviar por default el formulario; Si hicieramos un ejemplo de comentar nuestro código btnEnviar y al guardar cambios observamos que nos aparece 'Enviado Formulario' en mayúsculas.
 
 Ahora, en que casos debemos utilizar un click o un submit? usualmente submit lo vamos a utilizar en un formulario debido a que es una buena práctica; pero, muy importante, si observamos como el click que se encuentra seleccionando el input de tipo submit y este se encuentra asociado al botón; en cambio, el submit se encuentra asociado al formulario. Esto es importante tenerlo en cuenta.
