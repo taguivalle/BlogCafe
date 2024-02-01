@@ -1,6 +1,6 @@
 # BLOG CAFÉ
 
-## Validar formularios
+## Validar formularios parte uno (1)
 
 En esta lección one hundred fifty one (151) vamos a tratar el tema de como crear un validador de formularios parte uno (1); como decíamos en la anterior lección los campos se encuentran vacíos y al momento de enviar ese formulario aparecer 'Enviando Formulario'; cuando enviamos un formulario y los campos que queremos que sean obligatorios y po rlo tanto, si alguno queda vacío al momento de enviarlo, lo ideal sería mostrarle al usuario mediante un mensaje que diga por ejemplo que, 'todos los campos son obligatorios' o que 'hizo falta llenar algún campos'.
 

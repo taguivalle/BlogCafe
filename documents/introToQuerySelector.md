@@ -61,13 +61,15 @@ No es mala práctica hacerlo de esta manera que acabamos de hacer el selector; d
 De lo anterior, no tiene nada de espectacular, no estamos seleccionando el elemento y lo estamos viendo en consola; pero,
 **JavaScript** nos permite manipular los elementos del **HTML**; al momento de enviar un elemento a la consola en nuestro navegador solamente tenemos la etiqueta y su contenido; pero sí lo enviamos a Firefox developer prediction este va a tener mucho más información; podemos obervar un triángulo :small_red_triangle_down: y al expandirlo, se encuentra una serie de propiedades del elemento que acabamos de seleccionar. al hacer un poco más de scroll se nota; por ejemplo en la tagName y nos dice  que es un h2 y en general con la información de todo nuestro sitio web.
 
-todo la línea console.log(heading) al momento de utilizar querySelector es muy similar a un objeto; recordemos que, la forma en que se cambian las propiedades de un objeto es con un punto. Por lo tanto, vamos a cambiar esa línea escribimos heading.textContent = 'Nuevo heading'; guardamos cambios y observemos que sucede en la consola; todo sale como se escribió en el código; pero en Firefox se ve lo más detallado posible, con un menú que podemos utilizar y uno muy común es classList; este nos permite agregar o eliminar clases.
+todo la línea `console.log(heading)` al momento de utilizar querySelector es muy similar a un objeto; recordemos que, la forma en que se cambian las propiedades de un objeto es con un punto. Por lo tanto, vamos a cambiar esa línea escribimos Nuevo heading.`textContent = 'Nuevo heading'`; guardamos cambios y observemos que sucede en la consola; todo sale como se escribió en el código; pero en Firefox se ve lo más detallado posible, con un menú que podemos utilizar y uno muy común es classList; este nos permite agregar o eliminar clases.
 
-Con base en el anterior párrafo, vamos a crear una línea así: heading.classList.add('Nueva-clase); Esto viene a ser el
-cero punto uno por ciento (0.1%) es una pequeña parte de lo que podemos hacer con scripting de JavaScript.
+Con base en el anterior párrafo, vamos a crear una línea así: `heading.classList.add('Nueva-clase');` Esto viene a ser el
+cero punto uno por ciento (0.1%) es una pequeña parte de lo que podemos hacer con el scripting de **JavaScript**.
 
-`heading.classList.add('Nueva-clase);`
+```JavaScript
+heading.classList.add('Nueva-clase');
+```
 
-Lo más importante de esta lección es que querySelector nos retorna cero (0) on uno (1) elementos. A que se refiere esto, al observar la consola notemos que tenemos unos enlaces; tres arriba y tres abajo. Sí dentro del paréntesis de nuestra variable heading colocamos la etiqueta 'a' y lo enviamos a la consola; no importa mucho el nombre de la variable; observemos como solamente envía la consola 1; por supuesto que hay más enlaces pero el querySelector se limita al máximo uno (1).
+Lo más importante de esta lección es que `querySelector` nos retorna cero (0) on uno (1) elementos. A que se refiere esto, al observar la consola notemos que tenemos unos enlaces; tres arriba y tres abajo. Sí dentro del paréntesis de nuestra variable heading colocamos la etiqueta `'a'` y lo enviamos a la consola; no importa mucho el nombre de la variable; observemos como solamente envía la consola 1; por supuesto que hay más enlaces pero el `querySelector` se limita al máximo uno (1).
 
-Ahora, si nos llegásemos a equivocar con el selector por uno que no existe, el heading arrojaría null o vacío. O sea que, JavaScript dice, cometiste un error, tal vez quisiste decir esto, o tal vez buscabas este otro selector; no nos va a decir, simplemente nos va retornar que está vacío. entonces, si tenemos algo así como null, lo más seguro es se encuentre mal escrito. En la próxima clase 145 vamos a ver el tema de querySelectorAll.
+Ahora, si nos llegásemos a equivocar con el selector por uno que no existe, el heading arrojaría **null** o vacío. O sea que, **JavaScript** dice, cometiste un error, tal vez quisiste decir esto, o tal vez buscabas este otro selector; no nos va a decir, simplemente nos va retornar que está vacío. entonces, si tenemos algo así como **null**, lo más seguro es que se encuentre mal escrito. En la próxima clase one hundred forty five 145 vamos a ver el tema de **querySelectorAll**.
