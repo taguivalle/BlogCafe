@@ -127,7 +127,7 @@ img {
     /* Con esta línea background-size toma, el cover y le permite tomar todo el espacio disponible. */
     background-size: cover;
     background-repeat: no-repeat;
-    /* Con esta linea hacemos una posicion para que se vea bien en cualquier dispositivo. y vamos a utilizar dos veces
+    /* Con esta linea hacemos una posición para que se vea bien en cualquier dispositivo. y vamos a utilizar dos veces
     el center porque básicamente una imagen debe centrarse tanto verticalmente como horizontalmente. Dependiendo del
     anterior cover. */
     background-position: center center;

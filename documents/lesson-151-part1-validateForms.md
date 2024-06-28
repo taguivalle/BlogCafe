@@ -15,7 +15,7 @@ console.log(email);
 console.log(mensaje);
 `
 
-Posteriormente, guardamos cambios y vemos que en consola le damos enviar y no aparece absolutamente nada. Pero si llenamos el campo nombre y le damos enviar, podemos ver que ya aparece algo. Entonces, en la parte xxxx podemos validar el formulario o validar cada una de las variables. Porqué por ejemplo en el campo nombre que solamente se escriba aun nombre real de una persona, que en el campo email debe de tener la forma real de un correo electrónico con su respectiva arroba (@) y en el campo mensaje no debe de existir mayor confusión; o sea la idea es que se llenen los campos con los criterios normales de escritura para cada campo.
+Posteriormente, guardamos cambios y vemos que en consola le damos enviar y no aparece absolutamente nada. Pero si llenamos el campo nombre y le damos enviar, podemos ver que ya aparece algo. Entonces, en la parte xxxx podemos validar el formulario o validar cada una de las variables. Por que por ejemplo en el campo nombre que solamente se escriba aun nombre real de una persona, que en el campo email debe de tener la forma real de un correo electrónico con su respectiva arroba (@) y en el campo mensaje no debe de existir mayor confusión; o sea la idea es que se llenen los campos con los criterios normales de escritura para cada campo.
 
 Con base en lo anterior podemos reemplazar  nuestro console.log(nombre, email, mensaje) por un if() para que nos revise sí el nombre es igual a un string vacío, o si el correo electrónico cumple con los requisitos de validación que debe de tener esta clase de campo en el respectivo input. nuestro código sería: `if(nombre === ''){console.log('El nombre es vacío);}` guardamos cambios y observemos que sucede en consola.
 

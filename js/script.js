@@ -1,9 +1,11 @@
-// querySelector.
+// A continuación se presentan los query más comunes en Js, querySelector, querySelector all y getElementById. 
+
+// La primera es querySelector:
 const heading = document.querySelector('.header__text h2'); // cero (0) o un (1) elemento
 heading.textContent = 'New heading';
 // console.log(heading);
 
-// querySelectorAll.
+// la segunda es: querySelectorAll. Este va a retornar ya sea uno (1) o hasta un elemento que concuerde con el elemento que estamos escribiendo. 
 const enlaces = document.querySelectorAll('.navegacion a'); // cero
 enlaces[0].textContent = 'Nuevo texto para enlace';
 enlaces[0].classList.add('nueva-clase');
@@ -11,9 +13,10 @@ enlaces[0].classList.add('nueva-clase');
 // enlaces[0].href = 'https://www.google.com/';
 // console.log(enlaces[0]);
 
-// enlaces = document.querySelectorAll('.navegacion a')[0].textContent = 'Nuevo texto para enlace';
+// en estas dos líneas se suprime la variable y el indice se junta al final de la línea
+// document.querySelectorAll('.navegacion a')[0].textContent = 'Nuevo texto para enlace';
 
-// getElementById.
+// La tercera es getElementById.
 // const heading2 = document.getElementById('heading');
 // console.log(heading2);
 

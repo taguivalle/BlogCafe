@@ -19,7 +19,7 @@ btnEnviar.addEventListener('click', function(){
 })
 ```
 
-Al momento de guardar cambios, notamos que, al presionar sobre el botón **ENVIAR** aparece muy rápido tanto en la consola como en el lado izquierdo la pantalla tiene el mismo evento de recargarse muy velozmente. Esto sucede por lo siguiente: al instante de presionar en un **submit** de un formulario la acción se presenta por default y lo que hace este formulario sería; enviar esos datos, enviar toda la información que el usuario digitara y esta llega a algún archivo que se encuentre alojado en nuestro servidor.
+Al momento de guardar cambios, notamos que, al presionar sobre el botón **ENVIAR** aparece muy rápido tanto en la consola como en el lado izquierdo la pantalla tiene el mismo evento de recargarse muy velozmente. Esto sucede por lo siguiente: al instante de presionar en un **submit** de un formulario la acción se presenta por default y lo que hace este formulario sería; enviar esos datos, enviar toda la información que el usuario digitará y esta llega a algún archivo que se encuentre alojado en nuestro servidor.
 
 Entonces, eso es lo que hace un botón enviar, por default la información registrada y esto es lo que se conoce como un **comportamiento normal**; y a ¿que nos referimos con normal? por ejemplo si deseamos ingresar en nuestro sitio web en el enlace cursos, ese comportamiento normal es que nos lleve hacia ésa página. Si en nuestra página o nuestro archivo `contacto.html` escribimos algo en el campo nombre o en los demás campos es que estos datos se coloquen en el **input**.
 

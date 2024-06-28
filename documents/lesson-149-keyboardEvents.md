@@ -2,13 +2,13 @@
 
 ## Keyboard events
 
-Como es es común tratamos de hacer una pequeña introducción de esta lección one hundred forty nine (149) y para este caso vamos a tener uno llamado Keyboard events; que sería algo así como aquellos eventos que suceden al momento de insertar datos en un formulario; para esta lección vamos a comentar o a limpiar algunos datos de nuestro archivo `script.js;` para mi preferencia voy a comentarlos.
+Como es es común tratamos de hacer una pequeña introducción de esta lección one hundred forty nine (149) y para este caso vamos a tener uno llamado Keyboard events; que sería algo así como aquellos eventos que suceden al momento de insertar datos en un formulario; para esta lección vamos a comentar y/o a limpiar algunos datos de nuestro archivo `script.js;` para mi preferencia voy a comentarlos.
 
 De acuerdo con lo anterior, vamos a comentar la parte que habíamos comentado de eventos; en mi caso desde la línea treinta y ocho (38) hasta la cincuenta y cuatro (54). Esto con el fin de que, nuestra consola se encuentre un poco más limpia al momento de imprimir. Seguidamente al final del mismo archivo Js en el que nos escontramos, vamos a comentar una línea y que ésta diga por ejemplo, `// Eventos de los inputs y los TexTarea`.
 
 Ahora, esto eventos son muy comunes porque al momento de escribir en las cajas de texto se requiere validar o leer lo que el usuario está escribiendo y/o enviando. Podemos ver que, tenemos un `id="nombre"` en el input del formulario de nuestro archivo `contacto.html`; por lo tanto podemos utilizarlo para seleccionar ese elemento y agregarle un **addEventListener** y que este revise lo que el usuario está escribiendo.
 
-Listo, pasamos a nuestro archivo `script.js` y en la última línea vamos a crear una variable que se llame por ejemplo **nombreInput**; es a criterio personal para este ejemplo. continuamos con la misma estructura del código que hemos venido trabajando en el transcurso del archivo JS; entonces, vamos a igualar nuestra variable a `document.querySelector`; pero, porqué un **querySelector**? Porque estamos trayendo un **id** y en este caso se encuentra un solo elemento que es el nombre. Y recordemos que el **querySelector** nos trae de cero (0) a máximo elementos. Seguidamente escribimos los paréntesis y dentro de estos vamos a llamar a nuestro elemento dentro de unas comillas simples `'#nombre'`.
+Listo, pasamos a nuestro archivo `script.js` y en la última línea vamos a crear una variable que se llame por ejemplo **nombreInput**; es a criterio personal para este ejemplo. continuamos con la misma estructura del código que hemos venido trabajando en el transcurso del archivo JS; entonces, vamos a igualar nuestra variable a `document.querySelector`; pero, por qué un **querySelector**? Porque estamos trayendo un **id** y en este caso se encuentra un solo elemento que es el nombre. Y recordemos que el **querySelector** nos trae de cero (0) a máximo elementos. Seguidamente escribimos los paréntesis y dentro de estos vamos a llamar a nuestro elemento dentro de unas comillas simples `'#nombre'`.
 
 Al momento de guardar cambios vemos que, en nuestra consola podemos escribir nombre y nos sale más intenso el color del **input** con el id de nombre. Nuestra línea de código queda así: `const nombreInput = document.querySelector('#nombre);`
 
@@ -26,7 +26,7 @@ nombreInput.addEventListener('change', function(){
 
 Posteriormente, al guardar cambios y escribimos algo en el formulario de nuestro archivo contacto.html, damos enter, y de inmediato nos sale el mensaje en la consola de **Escribiendo**... Ahora este **change** tiene un detalle; al momento de oprimir la tecla enter o salirnos de esa caja de texto. Este change se ejecuta hasta que, salimos de la caja de texto. Sí queremos tener una validación más en tiempo real. Change no va a ser la mejor opción; la que puede ser mejor vendría a ser un **input**; probemos en nuestro formulario; pero no olvidemos cambiar change por input en nuestro archivo **script.js**.
 
-Al guardar cambios y empezar a escribir cualquier cosa en la caja de texto del campo nombre observamos en consola que comienza a enumerar las veces que vamos oprimiendo una tecla. Entonces, ¿cómo podemos ver o leer lo que el usuario está escribiendo? Bien recordemos que, en nuestra función (**function**) le podemos pasar un evento de lo que está sucediendo y dentro de los paréntesis podemos escribir la letra e, o la palabra **event, o evt, o evento, o la letra e**; probemoslo en nuestro archivo **script.js** a ver que sucede. No olvidar cambiar el mensaje de la línea.
+Al guardar cambios y empezar a escribir cualquier cosa en la caja de texto del campo nombre observamos en consola que comienza a enumerar las veces que vamos oprimiendo una tecla. Entonces, ¿cómo podemos ver o leer lo que el usuario está escribiendo? Bien recordemos que, en nuestra función (**function**) le podemos pasar un evento de lo que está sucediendo y dentro de los paréntesis podemos escribir la letra e, o la palabra **event, o evt, o evento, o la letra e**; probémoslo en nuestro archivo **script.js** a ver que sucede. No olvidar cambiar el mensaje de la línea.
 
 ```JavaScript
 console.log(e), console.log(event), console.log(evt), console.log(evento)
@@ -73,7 +73,7 @@ nombreInput.addEventListener('change', leerTexto);
 email.addEventListener('change', leerTexto);
 mensaje.addEventListener('change', leerTexto);
 function leerTexto(){
-    console.log('Escribiendo);
+    console.log('Escribiendo)');
 }
 ```
 
