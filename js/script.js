@@ -16,6 +16,11 @@ enlaces[0].classList.add('nueva-clase');
 // en estas dos líneas se suprime la variable y el indice se junta al final de la línea
 // document.querySelectorAll('.navegacion a')[0].textContent = 'Nuevo texto para enlace';
 
+// Con las siguientes líneas podemos cambiar el texto 
+// const enlaces = document.querySelectorAll('.navegacion a');
+// console.log(enlaces[0]);
+// enlaces[0].textContent = 'Nuevo Texto para Enlaces';
+
 // La tercera es getElementById.
 // const heading2 = document.getElementById('heading');
 // console.log(heading2);
