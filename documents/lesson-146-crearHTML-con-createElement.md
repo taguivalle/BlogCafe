@@ -1,4 +1,4 @@
-<!-- In that lesson one hundred forty six (146) trataremos el tema de createElement -->
+<!-- In that lesson one hundred forty six (146) let's deal with the issue of createElement -->
 
 # BLOG CAFÉ
 
