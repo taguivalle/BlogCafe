@@ -1,4 +1,4 @@
-// A continuación se presentan los query más comunes en Js, querySelector, querySelector all y getElementById. 
+// Esta vendría siendo la lección 145 en donde se presentan los query más comunes en Js, querySelector, querySelector all y getElementById. 
 
 // La primera es querySelector:
 const heading = document.querySelector('.header__text h2'); // cero (0) o un (1) elemento
@@ -25,20 +25,20 @@ enlaces[0].classList.add('nueva-clase');
 // const heading2 = document.getElementById('heading');
 // console.log(heading2);
 
-// createElement
+// Desde aquí viene siendo la lección 146 Crear HTML con createElement 
+// con esta lección se trata de como generar un nuevo enlace.
 const nuevoEnlace = document.createElement('A');
 
-// como generar un nuevo enlace.
-// Agregar el href.
+// Primero: Agregar el href.
 nuevoEnlace.href = 'Nuevo-enlace.html';
 
-// Agregar el texto.
+// Segundo: Agregar el texto.
 nuevoEnlace.textContent = 'Carrito';
 
-// Agregar la clase.
+// Tercero Agregar la clase.
 nuevoEnlace.classList.add('navegacion__enlace');
 
-// Agregarlo al documento
+// tercero: Agregarlo al documento
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 console.log(nuevoEnlace);
