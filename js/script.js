@@ -43,7 +43,15 @@ const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 console.log(nuevoEnlace);
 
-// Events
+// Events; este tema es de la lección 147
+
+// window.onload = function(){
+//     console.log(3);
+// };
+// document.addEventListener('DOMContentLoad', function(){// solo espera por el HTMl; pero no espera CSS o imágenes.
+//     console.log(4);
+// });
+// console.log(5);
 
 // console.log(1);
 // window.addEventListener('load', imprimir);// El load espera a que el JS y los archivos que dependen del HTMl estén listos.
