@@ -69,7 +69,8 @@ console.log(nuevoEnlace);
 //     console.log(evento);
 // }
 
-// Seleccionar elementos y asociarles un evento.
+// Desde aquí se encuentra la lección 148 Seleccionar elementos y asociarles un evento.
+
 // const btnEnviar = document.querySelector('.boton--primario');
 // btnEnviar.addEventListener('click', function (evento) {
 //     console.log(evento);
